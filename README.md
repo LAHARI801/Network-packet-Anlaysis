@@ -45,3 +45,32 @@ The network consists of:
 - Servers (Optional)
 
 ### Sample Topology
+
+---
+
+## ⚙️ Configuration Steps
+
+### 1. Create Network Topology
+
+- Add routers, switches, and PCs.
+- Connect devices using appropriate cables.
+
+### 2. Configure IP Addresses
+
+Example:
+
+| Device | IP Address | Subnet Mask |
+|----------|------------|-------------|
+| Router0 | 192.168.1.1 | 255.255.255.0 |
+| PC0 | 192.168.1.10 | 255.255.255.0 |
+| PC1 | 192.168.1.11 | 255.255.255.0 |
+
+### 3. Configure Router
+
+```bash
+enable
+configure terminal
+interface gigabitEthernet0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
